@@ -1,0 +1,363 @@
+/* ═══════════════════════════════════════════════════
+   Navbar — Glassmorphism sticky header
+   ═══════════════════════════════════════════════════ */
+
+/* ── Base Bar ── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background: rgba(253, 246, 227, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(107, 15, 26, 0.12);
+  box-shadow: 0 1px 24px rgba(107, 15, 26, 0.06);
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* subtle saffron glow line along the bottom */
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary, #6B0F1A) 30%, var(--secondary, #C9A227) 50%, var(--primary, #6B0F1A) 70%, transparent);
+  opacity: 0.55;
+  transition: opacity 0.4s;
+}
+
+.navbar--scrolled {
+  background: rgba(253, 246, 227, 0.95);
+  border-bottom-color: rgba(107, 15, 26, 0.22);
+  box-shadow: 0 4px 32px rgba(26, 26, 26, 0.15),
+              0 1px 16px rgba(107, 15, 26, 0.08);
+}
+
+.navbar--scrolled::after {
+  opacity: 0.8;
+}
+
+/* ── Container ── */
+.navbar__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Brand / Logo ── */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar__om {
+  font-size: 2rem;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--secondary, #C9A227), var(--primary-light, #A0334D));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 6px rgba(201, 162, 39, 0.4));
+  transition: filter 0.3s;
+}
+
+.navbar__brand:hover .navbar__om {
+  filter: drop-shadow(0 0 12px rgba(201, 162, 39, 0.7));
+}
+
+.navbar__temple-name {
+  font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--primary, #6B0F1A), var(--secondary, #C9A227));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* ── Desktop Nav Links ── */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__link {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-primary, #1A1A1A);
+  font-family: var(--font-primary, 'Poppins', sans-serif);
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md, 12px);
+  transition: color 0.3s, background 0.3s;
+}
+
+/* underline animation from center */
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary, #6B0F1A);
+  border-radius: 2px;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar__link:hover {
+  color: var(--primary-light, #A0334D);
+}
+
+.navbar__link:hover::after {
+  width: 60%;
+  left: 20%;
+}
+
+/* active state */
+.navbar__link--active {
+  color: var(--primary, #6B0F1A);
+}
+
+.navbar__link--active::after {
+  width: 60%;
+  left: 20%;
+  background: linear-gradient(90deg, var(--primary, #6B0F1A), var(--secondary, #C9A227));
+}
+
+/* ── Donate CTA ── */
+.navbar__donate-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: var(--font-primary, 'Poppins', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.5rem 1.35rem;
+  border-radius: 50px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary, #6B0F1A), var(--secondary, #C9A227));
+  box-shadow: 0 2px 12px rgba(107, 15, 26, 0.3);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.3s;
+  white-space: nowrap;
+  margin-left: 0.5rem;
+}
+
+.navbar__donate-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(107, 15, 26, 0.45);
+  filter: brightness(1.08);
+}
+
+.navbar__donate-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ── Language Toggle ── */
+.navbar__lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(107, 15, 26, 0.15);
+  border: 1px solid rgba(201, 162, 39, 0.25);
+  color: var(--text-primary, #1A1A1A);
+  font-family: var(--font-primary, 'Poppins', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar__lang-btn:hover {
+  background: rgba(107, 15, 26, 0.3);
+  border-color: rgba(201, 162, 39, 0.5);
+  box-shadow: 0 0 12px rgba(201, 162, 39, 0.15);
+}
+
+.navbar__lang-btn--mobile {
+  margin: 0.5rem 1rem 0;
+  width: calc(100% - 2rem);
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* ── Hamburger ── */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1010;
+}
+
+.navbar__hamburger-bar {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  border-radius: 4px;
+  background: var(--primary, #6B0F1A);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.25s,
+              width 0.3s;
+}
+
+/* morph to X */
+.navbar__hamburger--open .navbar__hamburger-bar:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.navbar__hamburger--open .navbar__hamburger-bar:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.navbar__hamburger--open .navbar__hamburger-bar:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* ── Mobile Dropdown ── */
+.navbar__mobile {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(253, 246, 227, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(107, 15, 26, 0.15);
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.35s;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.navbar__mobile--open {
+  max-height: 420px;
+  opacity: 1;
+}
+
+.navbar__mobile-links {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.navbar__mobile-link {
+  display: block;
+  text-decoration: none;
+  color: var(--text-primary, #1A1A1A);
+  font-family: var(--font-primary, 'Poppins', sans-serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md, 12px);
+  transition: background 0.25s, color 0.25s, padding-left 0.3s;
+}
+
+.navbar__mobile-link:hover {
+  background: rgba(107, 15, 26, 0.1);
+  color: var(--primary-light, #A0334D);
+  padding-left: 1.4rem;
+}
+
+.navbar__mobile-link--active {
+  color: var(--primary, #6B0F1A);
+  background: rgba(107, 15, 26, 0.08);
+  border-left: 3px solid var(--primary, #6B0F1A);
+}
+
+.navbar__donate-btn--mobile {
+  margin: 0.5rem 1rem 0;
+  text-align: center;
+  width: calc(100% - 2rem);
+}
+
+/* ── Backdrop ── */
+.navbar__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(26, 26, 26, 0.1);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ═══════════════════════════════════════════════════
+   Responsive
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__temple-name {
+    font-size: 0.95rem;
+  }
+
+  .navbar__om {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar__mobile {
+    display: none;
+  }
+
+  .navbar__backdrop {
+    display: none;
+  }
+}

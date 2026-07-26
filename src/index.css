@@ -1,0 +1,330 @@
+/* ============================================
+   🔱 Bhagwan Shiv & Shri Khatu Shyam Ji Mandir
+   Design System — index.css
+   ============================================ */
+
+/* ------------------------------------------
+   CSS Custom Properties (Design Tokens)
+   ------------------------------------------ */
+:root {
+  /* Primary — Warm Terracotta */
+  --primary: #6B0F1A;
+  --primary-light: #8A1926;
+  --primary-dark: #470810;
+
+  /* Secondary — Soft Gold */
+  --secondary: #C9A227;
+  --secondary-light: #DDBD4A;
+
+  /* Accent — Accent Red */
+  --accent: #E85D04;
+  --accent-light: #F77D2C;
+
+  /* Backgrounds */
+  --bg-dark: #F0E5CC;
+  --bg-medium: #FDF6E3;
+  --bg-light: #FFFFFF;
+  --bg-card: rgba(255, 255, 255, 0.7);
+
+  /* Typography Colors */
+  --text-primary: #1A1A1A;
+  --text-secondary: #404040;
+  --text-accent: #6B0F1A;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #FDF6E3 0%, #FFFFFF 50%, #FDF6E3 100%);
+  --gradient-saffron: linear-gradient(135deg, #6B0F1A, #C9A227);
+  --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(201, 162, 39, 0.15));
+
+  /* Glass Morphism */
+  --glass: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(107, 15, 26, 0.15);
+
+  /* Shadows */
+  --shadow-glow: 0 0 20px rgba(107, 15, 26, 0.15);
+  --shadow-card: 0 8px 32px rgba(26, 26, 26, 0.08);
+
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  /* Fonts */
+  --font-primary: 'Poppins', sans-serif;
+  --font-hindi: 'Noto Sans Devanagari', sans-serif;
+
+  /* Transition */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ------------------------------------------
+   Global Resets
+   ------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ------------------------------------------
+   Utility Classes
+   ------------------------------------------ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: var(--gradient-saffron);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title-hindi {
+  font-family: var(--font-hindi);
+  font-size: 1.3rem;
+  text-align: center;
+  color: var(--secondary);
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  border-color: rgba(201, 162, 39, 0.3);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-primary {
+  background: var(--gradient-saffron);
+  color: #F0E5CC;
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(107, 15, 26, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  background: var(--secondary);
+  color: #F0E5CC;
+}
+
+/* ------------------------------------------
+   Keyframe Animations
+   ------------------------------------------ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(107, 15, 26, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(107, 15, 26, 0.6);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ------------------------------------------
+   Animation Utility Classes
+   ------------------------------------------ */
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ------------------------------------------
+   Scrollbar Styling
+   ------------------------------------------ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-saffron);
+  border-radius: 4px;
+}
+
+/* ------------------------------------------
+   Selection Styling
+   ------------------------------------------ */
+::selection {
+  background: rgba(107, 15, 26, 0.3);
+  color: #C9A227;
+}
+
+/* ------------------------------------------
+   Responsive Typography
+   ------------------------------------------ */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-padding {
+    padding: 3rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* ------------------------------------------
+   React Icons Styles
+   ------------------------------------------ */
+.inline-icon {
+  vertical-align: -0.125em;
+  display: inline-block;
+}

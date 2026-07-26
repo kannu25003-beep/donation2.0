@@ -1,0 +1,696 @@
+/* ================================================================
+   HOME PAGE STYLES
+   Temple Donation Website – Bhagwan Shiv & Shri Khatu Shyam Ji
+   ================================================================ */
+
+/* ── Keyframes ─────────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -48%) scale(1.04);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(107, 15, 26, 0.4),
+      0 0 60px rgba(107, 15, 26, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(107, 15, 26, 0.6),
+      0 0 90px rgba(107, 15, 26, 0.25);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* ── Utility ───────────────────────────────────────────────────── */
+.fadeInUp {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.home {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ── Shared Section Header ─────────────────────────────────────── */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary, #1A1A1A);
+  margin: 0 0 0.25rem;
+  letter-spacing: 0;
+}
+
+.section-subtitle {
+  font-family: var(--font-primary, "Poppins", sans-serif);
+  font-size: 1rem;
+  color: var(--text-secondary, #404040);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+/* ================================================================
+   1. HERO SECTION
+   ================================================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 6rem 1.5rem 4rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.hero__bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+}
+
+.hero__bg-image.active {
+  opacity: 1;
+}
+
+.hero__bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    175deg,
+    rgba(240, 229, 204, 0.85) 0%,
+    rgba(253, 246, 227, 0.8) 40%,
+    rgba(255, 255, 255, 0.75) 70%
+  );
+  z-index: 1;
+}
+
+/* Floating ॐ */
+.hero__bg-om {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22rem;
+  line-height: 1;
+  opacity: 0.03;
+  color: var(--secondary, #C9A227);
+  pointer-events: none;
+  user-select: none;
+  z-index: 2;
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.hero__bg-om::after {
+  content: "ॐ";
+  display: block;
+}
+
+/* Content wrapper */
+.hero__content {
+  position: relative;
+  z-index: 3;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  gap: 1.2rem;
+}
+
+/* Taglines */
+.hero__taglines {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero__tagline {
+  font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
+  font-size: 0.95rem;
+  color: var(--text-accent, #C9A227);
+  letter-spacing: 2px;
+  text-transform: none;
+}
+
+.hero__tagline-divider {
+  color: var(--primary, #6B0F1A);
+  font-size: 0.7rem;
+}
+
+/* Title */
+.hero__title {
+  font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-primary, #1A1A1A);
+  margin: 0.5rem 0 0;
+  background: linear-gradient(135deg, #1A1A1A 0%, #C9A227 50%, #6B0F1A 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation:
+    fadeInUp 0.8s ease-out forwards,
+    shimmer 6s linear infinite;
+  animation-delay: 0.15s, 0s;
+  opacity: 0;
+}
+
+/* Subtitle */
+.hero__subtitle {
+  font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-accent, #C9A227);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Location badge */
+.hero__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
+  font-size: 1rem;
+  color: var(--text-secondary, #404040);
+  background: rgba(107, 15, 26, 0.08);
+  border: 1px solid rgba(107, 15, 26, 0.15);
+  border-radius: var(--radius-lg, 16px);
+  padding: 0.6rem 1.4rem;
+  backdrop-filter: blur(6px);
+}
+
+.hero__location-icon {
+  font-size: 1.15rem;
+}
+
+/* Description */
+.hero__description {
+  font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--text-secondary, #404040);
+  max-width: 680px;
+  margin-top: 0.5rem;
+}
+
+/* CTA Button */
+.hero__cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 2.8rem;
+  font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(
+    135deg,
+    var(--primary, #6B0F1A),
+    var(--accent, #E85D04)
+  );
+  border: none;
+  border-radius: var(--radius-lg, 16px);
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation:
+    fadeInUp 0.8s ease-out forwards,
+    glowPulse 3s ease-in-out infinite;
+  animation-delay: 0.75s, 1.6s;
+  opacity: 0;
+}
+
+.hero__cta:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow:
+    0 0 35px rgba(107, 15, 26, 0.6),
+    0 0 80px rgba(107, 15, 26, 0.2);
+}
+
+/* ================================================================
+   2. DONATION TIERS SECTION
+   ================================================================ */
+.tiers {
+  padding: 5rem 1.5rem;
+  background: var(--bg-dark, #F0E5CC);
+}
+
+.tiers__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Tier Card */
+.tier-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  aspect-ratio: 1 / 1;
+  padding: 2rem 1rem;
+  text-decoration: none;
+  background: var(--glass, rgba(255, 255, 255, 0.5));
+  border: 1px solid var(--glass-border, rgba(107, 15, 26, 0.12));
+  border-radius: var(--radius-xl, 24px);
+  backdrop-filter: blur(12px);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.tier-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(201, 162, 39, 0.08) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.tier-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow:
+    0 8px 40px rgba(107, 15, 26, 0.25),
+    0 0 60px rgba(201, 162, 39, 0.08);
+  border-color: rgba(201, 162, 39, 0.3);
+}
+
+.tier-card:hover::before {
+  opacity: 1;
+}
+
+.tier-card__amount {
+  font-family: var(--font-primary, "Poppins", sans-serif);
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #C9A227, #6B0F1A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+.tier-card__label {
+  font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary, #1A1A1A);
+}
+
+.tier-card__english {
+  font-family: var(--font-primary, "Poppins", sans-serif);
+  font-size: 0.78rem;
+  color: var(--text-secondary, #404040);
+  letter-spacing: 0.5px;
+}
+
+/* Custom / wish text */
+.tiers__custom {
+  text-align: center;
+  font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
+  font-size: 1.05rem;
+  color: var(--text-secondary, #404040);
+  margin-top: 2.5rem;
+}
+
+.tiers__tagline {
+  text-align: center;
+  font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-accent, #C9A227);
+  margin-top: 1rem;
+}
+
+/* ================================================================
+   3. COMMITMENTS SECTION
+   ================================================================ */
+.commitments {
+  padding: 5rem 1.5rem;
+  background: var(--bg-medium, #FDF6E3);
+}
+
+.commitments__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+/* Commitment Card */
+.commitment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
+  padding: 2.5rem 2rem;
+  background: var(--glass, rgba(255, 255, 255, 0.5));
+  border: 1px solid var(--glass-border, rgba(107, 15, 26, 0.12));
+  border-radius: var(--radius-xl, 24px);
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.commitment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 30px rgba(107, 15, 26, 0.15);
+}
+
+.commitment-card__icon {
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+.commitment-card__hindi {
+  font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-primary, #1A1A1A);
+  margin: 0;
+}
+
+.commitment-card__english {
+  font-family: var(--font-primary, "Poppins", sans-serif);
+  font-size: 0.82rem;
+  color: var(--text-secondary, #404040);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* ================================================================
+   4. GALLERY SECTION
+   ================================================================ */
+.gallery-section {
+  padding: 5rem 1.5rem;
+  background: var(--bg-dark, #F0E5CC);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 4 / 3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ================================================================
+   4. CTA BANNER
+   ================================================================ */
+.cta-banner {
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.cta-banner__content {
+  max-width: 740px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.cta-banner__hindi {
+  font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
+  font-size: 1.35rem;
+  line-height: 1.8;
+  color: var(--text-primary, #1A1A1A);
+  margin: 0;
+}
+
+.cta-banner__english {
+  font-family: var(--font-primary, "Poppins", sans-serif);
+  font-size: 1.05rem;
+  color: var(--text-secondary, #404040);
+  margin: 0;
+}
+
+.cta-banner__btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1.1rem 3rem;
+  font-family: var(--font-primary, "Poppins", sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(
+    135deg,
+    var(--primary, #6B0F1A),
+    var(--accent, #E85D04)
+  );
+  border: none;
+  border-radius: var(--radius-lg, 16px);
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.cta-banner__btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow:
+    0 0 40px rgba(107, 15, 26, 0.55),
+    0 0 80px rgba(107, 15, 26, 0.2);
+}
+
+/* ================================================================
+   RESPONSIVE BREAKPOINTS
+   ================================================================ */
+
+/* ── Tablet (≤ 1024px) ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero__title {
+    font-size: 2.8rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.35rem;
+  }
+
+  .tiers__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tier-card {
+    aspect-ratio: auto;
+    padding: 2rem 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* ── Small Tablet / Large Phone (≤ 768px) ───────────────────────── */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 5rem 1.25rem 3.5rem;
+  }
+
+  .hero__title {
+    font-size: 2.2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.15rem;
+  }
+
+  .hero__description {
+    font-size: 1rem;
+  }
+
+  .hero__bg-om {
+    font-size: 14rem;
+  }
+
+  .tiers__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .tier-card__amount {
+    font-size: 2rem;
+  }
+
+  .commitments__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .cta-banner__hindi {
+    font-size: 1.15rem;
+  }
+}
+
+/* ── Phone (≤ 480px) ────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .hero {
+    padding: 7rem 1rem 3rem;
+  }
+
+  .hero__title {
+    font-size: 1.8rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .hero__location {
+    font-size: 0.88rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .hero__description {
+    font-size: 0.92rem;
+    line-height: 1.75;
+  }
+
+  .hero__cta {
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+  }
+
+  .hero__bg-om {
+    font-size: 10rem;
+  }
+
+  .tiers__grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+
+  .tier-card__amount {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+  }
+
+  .commitment-card {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .cta-banner {
+    padding: 3rem 1rem;
+  }
+
+  .cta-banner__hindi {
+    font-size: 1rem;
+  }
+
+  .cta-banner__english {
+    font-size: 0.92rem;
+  }
+
+  .cta-banner__btn {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+}
