@@ -232,11 +232,6 @@
   height: 100%;
   object-fit: cover;
   object-position: top;
-  transition: transform 0.5s ease;
-}
-
-.guru-img-wrapper:hover img {
-  transform: scale(1.05);
 }
 
 .about-guru__text {

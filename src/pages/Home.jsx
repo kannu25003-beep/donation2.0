@@ -55,6 +55,7 @@ const bannerImages = [
 function Home() {
   const { t } = useLanguage();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [lightboxImage, setLightboxImage] = useState(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -62,6 +63,18 @@ function Home() {
     }, 5000); // Change image every 5 seconds
     return () => clearInterval(timer);
   }, []);
+
+  // Prevent scrolling when lightbox is open
+  useEffect(() => {
+    if (lightboxImage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [lightboxImage]);
 
   return (
     <div className="home">
@@ -187,6 +200,7 @@ function Home() {
               className="gallery-item fadeInUp"
               key={index}
               style={{ animationDelay: `${0.2 + index * 0.15}s` }}
+              onClick={() => setLightboxImage(img)}
             >
               <img src={img} alt={`Divine glimpse ${index + 1}`} />
             </div>
@@ -208,6 +222,18 @@ function Home() {
           </Link>
         </div>
       </section>
+
+      {/* ───────── Lightbox ───────── */}
+      {lightboxImage && (
+        <div className="lightbox" onClick={() => setLightboxImage(null)}>
+          <div className="lightbox__content" onClick={(e) => e.stopPropagation()}>
+            <img src={lightboxImage} alt="Fullscreen View" />
+            <button className="lightbox__close" onClick={() => setLightboxImage(null)}>
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
