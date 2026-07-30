@@ -6,7 +6,7 @@
 .section-label {
   display: inline-block;
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
-  color: var(--secondary, #C9A227);
+  color: var(--secondary, #D4AF37);
   font-size: 0.95rem;
   letter-spacing: 0.1em;
   margin-bottom: 0.5rem;
@@ -28,7 +28,7 @@
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
   font-size: 2.25rem;
   font-weight: 700;
-  color: var(--text-primary, #1A1A1A);
+  color: var(--text-primary, #FFF5E6);
   line-height: 1.3;
 }
 
@@ -36,7 +36,7 @@
   font-family: var(--font-primary, 'Poppins', sans-serif);
   font-size: 1.1rem;
   font-weight: 400;
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
   letter-spacing: 0.04em;
 }
 
@@ -66,15 +66,15 @@
   padding: 8rem 2rem 4rem;
   text-align: center;
   overflow: hidden;
-  background: var(--gradient-hero, linear-gradient(135deg, #F0E5CC 0%, #FDF6E3 50%, #FFFFFF 100%));
+  background: var(--gradient-hero, linear-gradient(135deg, #0D0208 0%, #0D0208 50%, #2A1018 100%));
 }
 
 .about-hero__overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(107, 15, 26, 0.12) 0%, transparent 70%),
-    radial-gradient(circle at 20% 80%, rgba(201, 162, 39, 0.06) 0%, transparent 50%);
+    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(128, 0, 32, 0.12) 0%, transparent 70%),
+    radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.06) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -89,10 +89,10 @@
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
   font-size: 3.4rem;
   font-weight: 700;
-  color: var(--text-primary, #1A1A1A);
+  color: var(--text-primary, #FFF5E6);
   margin: 0 0 0.25rem;
   line-height: 1.2;
-  background: linear-gradient(135deg, var(--secondary, #C9A227) 0%, var(--primary, #6B0F1A) 100%);
+  background: linear-gradient(135deg, var(--secondary, #D4AF37) 0%, var(--primary, #800020) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -101,7 +101,7 @@
 .about-hero__title-en {
   font-family: var(--font-primary, 'Poppins', sans-serif);
   font-size: 1.15rem;
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
   margin: 0 0 1.5rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -118,21 +118,21 @@
 }
 
 .about-hero__breadcrumb a {
-  color: var(--secondary, #C9A227);
+  color: var(--secondary, #D4AF37);
   text-decoration: none;
   transition: var(--transition, color 0.3s ease);
 }
 
 .about-hero__breadcrumb a:hover {
-  color: var(--primary, #6B0F1A);
+  color: var(--primary, #800020);
 }
 
 .about-hero__breadcrumb-sep {
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
 }
 
 .about-hero__breadcrumb-current {
-  color: var(--text-primary, #1A1A1A);
+  color: var(--text-primary, #FFF5E6);
 }
 
 /* =========================================================
@@ -140,7 +140,7 @@
    ========================================================= */
 .about-vision {
   padding: 5rem 2rem;
-  background: var(--bg-dark, #F0E5CC);
+  background: var(--bg-dark, #0D0208);
 }
 
 .about-vision__inner {
@@ -159,7 +159,7 @@
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
   font-size: 1.1rem;
   line-height: 1.9;
-  color: var(--text-primary, #1A1A1A);
+  color: var(--text-primary, #FFF5E6);
   margin-bottom: 1.25rem;
 }
 
@@ -167,10 +167,10 @@
   font-family: var(--font-primary, 'Poppins', sans-serif);
   font-size: 0.92rem;
   line-height: 1.75;
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
   margin-top: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(107, 15, 26, 0.15);
+  border-top: 1px solid rgba(128, 0, 32, 0.15);
 }
 
 /* Temple decorative image card */
@@ -184,10 +184,10 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  background: var(--glass, rgba(107, 15, 26, 0.06));
-  border: 1px solid var(--glass-border, rgba(201, 162, 39, 0.15));
+  background: var(--glass, rgba(128, 0, 32, 0.06));
+  border: 1px solid var(--glass-border, rgba(212, 175, 55, 0.15));
   box-shadow:
-    var(--shadow-glow, 0 0 40px rgba(107, 15, 26, 0.12)),
+    var(--shadow-glow, 0 0 40px rgba(128, 0, 32, 0.12)),
     0 12px 30px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
@@ -201,7 +201,7 @@
 /* ─── Mahant Guru Ji Section ─── */
 .about-guru {
   padding: 5rem 2rem;
-  background: var(--bg-medium, #FDF6E3);
+  background: var(--bg-medium, #0D0208);
 }
 
 .about-guru__inner {
@@ -223,8 +223,8 @@
   aspect-ratio: 3 / 4;
   border-radius: var(--radius-xl, 24px);
   overflow: hidden;
-  border: 4px solid var(--secondary, #C9A227);
-  box-shadow: 0 10px 30px rgba(107, 15, 26, 0.15);
+  border: 4px solid var(--secondary, #D4AF37);
+  box-shadow: 0 10px 30px rgba(128, 0, 32, 0.15);
 }
 
 .guru-img-wrapper img {
@@ -247,7 +247,7 @@
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
   font-size: 1.15rem;
   line-height: 1.8;
-  color: var(--text-primary, #1A1A1A);
+  color: var(--text-primary, #FFF5E6);
   margin-top: 1rem;
 }
 
@@ -281,7 +281,7 @@
 }
 
 .committee-card:hover {
-  border-color: rgba(201, 162, 39, 0.4);
+  border-color: rgba(212, 175, 55, 0.4);
   box-shadow: var(--shadow-glow);
   transform: translateY(-5px);
 }
@@ -315,7 +315,7 @@
   position: absolute;
   inset: -16px;
   border-radius: 50%;
-  border: 1px dashed rgba(201, 162, 39, 0.18);
+  border: 1px dashed rgba(212, 175, 55, 0.18);
   animation: omSpin 24s linear infinite;
 }
 
@@ -333,7 +333,7 @@
    ========================================================= */
 .about-mission {
   padding: 5rem 2rem;
-  background: var(--bg-medium, #FDF6E3);
+  background: var(--bg-medium, #0D0208);
 }
 
 .about-mission__inner {
@@ -352,8 +352,8 @@
 }
 
 .mission-card {
-  background: var(--glass, rgba(107, 15, 26, 0.06));
-  border: 1px solid var(--glass-border, rgba(201, 162, 39, 0.15));
+  background: var(--glass, rgba(128, 0, 32, 0.06));
+  border: 1px solid var(--glass-border, rgba(212, 175, 55, 0.15));
   border-radius: var(--radius-lg, 16px);
   padding: 2.5rem 2rem;
   text-align: center;
@@ -363,9 +363,9 @@
 
 .mission-card:hover {
   transform: translateY(-6px);
-  border-color: var(--primary, #6B0F1A);
+  border-color: var(--primary, #800020);
   box-shadow:
-    var(--shadow-glow, 0 0 40px rgba(107, 15, 26, 0.12)),
+    var(--shadow-glow, 0 0 40px rgba(128, 0, 32, 0.12)),
     0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
@@ -379,14 +379,14 @@
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
   font-size: 1.65rem;
   font-weight: 700;
-  color: var(--secondary, #C9A227);
+  color: var(--secondary, #D4AF37);
   margin: 0 0 0.15rem;
 }
 
 .mission-card__title-en {
   font-family: var(--font-primary, 'Poppins', sans-serif);
   font-size: 0.85rem;
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0 0 1.25rem;
@@ -396,7 +396,7 @@
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--text-primary, #1A1A1A);
+  color: var(--text-primary, #FFF5E6);
   margin: 0 0 0.5rem;
 }
 
@@ -404,7 +404,7 @@
   font-family: var(--font-primary, 'Poppins', sans-serif);
   font-size: 0.82rem;
   line-height: 1.6;
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
   margin: 0;
 }
 
@@ -413,7 +413,7 @@
    ========================================================= */
 .about-trust {
   padding: 5rem 2rem;
-  background: var(--bg-dark, #F0E5CC);
+  background: var(--bg-dark, #0D0208);
 }
 
 .about-trust__inner {
@@ -443,7 +443,7 @@
   flex-direction: column;
   gap: 0.2rem;
   padding-bottom: 1.25rem;
-  border-bottom: 1px solid rgba(107, 15, 26, 0.1);
+  border-bottom: 1px solid rgba(128, 0, 32, 0.1);
 }
 
 .trust-detail-row:last-child {
@@ -456,30 +456,30 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
 }
 
 .trust-detail-value {
   font-family: var(--font-primary, 'Poppins', sans-serif);
   font-size: 1.05rem;
-  color: var(--text-primary, #1A1A1A);
+  color: var(--text-primary, #FFF5E6);
   font-weight: 500;
 }
 
 .trust-phone {
-  color: var(--secondary, #C9A227);
+  color: var(--secondary, #D4AF37);
   text-decoration: none;
   transition: var(--transition, color 0.3s ease);
 }
 
 .trust-phone:hover {
-  color: var(--primary, #6B0F1A);
+  color: var(--primary, #800020);
 }
 
 /* Bank details card */
 .bank-card {
-  background: var(--glass, rgba(107, 15, 26, 0.06));
-  border: 1px solid var(--glass-border, rgba(201, 162, 39, 0.15));
+  background: var(--glass, rgba(128, 0, 32, 0.06));
+  border: 1px solid var(--glass-border, rgba(212, 175, 55, 0.15));
   border-radius: var(--radius-lg, 16px);
   padding: 2rem;
   box-shadow: var(--shadow-card, 0 4px 24px rgba(0, 0, 0, 0.2));
@@ -489,7 +489,7 @@
   font-family: var(--font-primary, 'Poppins', sans-serif);
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--secondary, #C9A227);
+  color: var(--secondary, #D4AF37);
   margin: 0 0 1.5rem;
   display: flex;
   align-items: center;
@@ -511,7 +511,7 @@
   justify-content: space-between;
   align-items: baseline;
   padding-bottom: 0.85rem;
-  border-bottom: 1px dashed rgba(107, 15, 26, 0.12);
+  border-bottom: 1px dashed rgba(128, 0, 32, 0.12);
 }
 
 .bank-row:last-child {
@@ -524,14 +524,14 @@
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
   flex-shrink: 0;
 }
 
 .bank-row__value {
   font-family: var(--font-primary, 'Poppins', sans-serif);
   font-size: 0.95rem;
-  color: var(--text-primary, #1A1A1A);
+  color: var(--text-primary, #FFF5E6);
   font-weight: 500;
   text-align: right;
 }
@@ -541,7 +541,7 @@
    ========================================================= */
 .about-cta {
   padding: 5rem 2rem;
-  background: var(--bg-medium, #FDF6E3);
+  background: var(--bg-medium, #0D0208);
   text-align: center;
 }
 
@@ -551,10 +551,10 @@
   padding: 3.5rem 2.5rem;
   border-radius: var(--radius-xl, 24px);
   background:
-    radial-gradient(ellipse at 50% 0%, rgba(107, 15, 26, 0.14) 0%, transparent 65%),
-    var(--glass, rgba(107, 15, 26, 0.06));
-  border: 1px solid var(--glass-border, rgba(201, 162, 39, 0.15));
-  box-shadow: var(--shadow-glow, 0 0 40px rgba(107, 15, 26, 0.12));
+    radial-gradient(ellipse at 50% 0%, rgba(128, 0, 32, 0.14) 0%, transparent 65%),
+    var(--glass, rgba(128, 0, 32, 0.06));
+  border: 1px solid var(--glass-border, rgba(212, 175, 55, 0.15));
+  box-shadow: var(--shadow-glow, 0 0 40px rgba(128, 0, 32, 0.12));
 }
 
 .about-cta__om {
@@ -567,7 +567,7 @@
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
   font-size: 1.85rem;
   font-weight: 700;
-  color: var(--text-primary, #1A1A1A);
+  color: var(--text-primary, #FFF5E6);
   margin: 0 0 0.5rem;
   line-height: 1.4;
 }
@@ -575,7 +575,7 @@
 .about-cta__title-en {
   font-family: var(--font-primary, 'Poppins', sans-serif);
   font-size: 1rem;
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
   margin: 0 0 2rem;
 }
 
@@ -585,19 +585,19 @@
   gap: 0.6rem;
   padding: 1rem 2.5rem;
   border-radius: var(--radius-md, 12px);
-  background: var(--gradient-saffron, linear-gradient(135deg, #6B0F1A 0%, #C9A227 100%));
-  color: var(--bg-dark, #F0E5CC);
+  background: var(--gradient-saffron, linear-gradient(135deg, #800020 0%, #D4AF37 100%));
+  color: var(--bg-dark, #0D0208);
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
   font-size: 1.2rem;
   font-weight: 700;
   text-decoration: none;
   transition: var(--transition, all 0.3s ease);
-  box-shadow: 0 4px 20px rgba(107, 15, 26, 0.35);
+  box-shadow: 0 4px 20px rgba(128, 0, 32, 0.35);
 }
 
 .about-cta__btn:hover {
   transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(107, 15, 26, 0.5);
+  box-shadow: 0 8px 32px rgba(128, 0, 32, 0.5);
 }
 
 .about-cta__btn-en {

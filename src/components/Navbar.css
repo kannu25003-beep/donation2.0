@@ -12,11 +12,11 @@
   z-index: 1000;
   display: flex;
   align-items: center;
-  background: rgba(253, 246, 227, 0.85);
+  background: rgba(13, 2, 8, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(107, 15, 26, 0.12);
-  box-shadow: 0 1px 24px rgba(107, 15, 26, 0.06);
+  border-bottom: 1px solid rgba(128, 0, 32, 0.12);
+  box-shadow: 0 1px 24px rgba(128, 0, 32, 0.06);
   transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
               box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
               border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -30,16 +30,16 @@
   left: 10%;
   width: 80%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--primary, #6B0F1A) 30%, var(--secondary, #C9A227) 50%, var(--primary, #6B0F1A) 70%, transparent);
+  background: linear-gradient(90deg, transparent, var(--primary, #800020) 30%, var(--secondary, #D4AF37) 50%, var(--primary, #800020) 70%, transparent);
   opacity: 0.55;
   transition: opacity 0.4s;
 }
 
 .navbar--scrolled {
-  background: rgba(253, 246, 227, 0.95);
-  border-bottom-color: rgba(107, 15, 26, 0.22);
+  background: rgba(13, 2, 8, 0.95);
+  border-bottom-color: rgba(128, 0, 32, 0.22);
   box-shadow: 0 4px 32px rgba(26, 26, 26, 0.15),
-              0 1px 16px rgba(107, 15, 26, 0.08);
+              0 1px 16px rgba(128, 0, 32, 0.08);
 }
 
 .navbar--scrolled::after {
@@ -71,23 +71,23 @@
 .navbar__om {
   font-size: 2rem;
   line-height: 1;
-  background: linear-gradient(135deg, var(--secondary, #C9A227), var(--primary-light, #A0334D));
+  background: linear-gradient(135deg, var(--secondary, #D4AF37), var(--primary-light, #A0334D));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 6px rgba(201, 162, 39, 0.4));
+  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.4));
   transition: filter 0.3s;
 }
 
 .navbar__brand:hover .navbar__om {
-  filter: drop-shadow(0 0 12px rgba(201, 162, 39, 0.7));
+  filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.7));
 }
 
 .navbar__temple-name {
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
   font-size: 1.15rem;
   font-weight: 600;
-  background: linear-gradient(135deg, var(--primary, #6B0F1A), var(--secondary, #C9A227));
+  background: linear-gradient(135deg, var(--secondary, #D4AF37), var(--text-primary, #FFF5E6));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -108,7 +108,7 @@
 .navbar__link {
   position: relative;
   text-decoration: none;
-  color: var(--text-primary, #1A1A1A);
+  color: var(--text-primary, #FFF5E6);
   font-family: var(--font-primary, 'Poppins', sans-serif);
   font-size: 0.92rem;
   font-weight: 500;
@@ -125,14 +125,14 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background: var(--primary, #6B0F1A);
+  background: var(--primary, #800020);
   border-radius: 2px;
   transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
               left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar__link:hover {
-  color: var(--primary-light, #A0334D);
+  color: var(--secondary, #D4AF37);
 }
 
 .navbar__link:hover::after {
@@ -142,13 +142,13 @@
 
 /* active state */
 .navbar__link--active {
-  color: var(--primary, #6B0F1A);
+  color: var(--secondary, #D4AF37);
 }
 
 .navbar__link--active::after {
   width: 60%;
   left: 20%;
-  background: linear-gradient(90deg, var(--primary, #6B0F1A), var(--secondary, #C9A227));
+  background: linear-gradient(90deg, var(--primary, #800020), var(--secondary, #D4AF37));
 }
 
 /* ── Donate CTA ── */
@@ -163,8 +163,8 @@
   padding: 0.5rem 1.35rem;
   border-radius: 50px;
   color: #fff;
-  background: linear-gradient(135deg, var(--primary, #6B0F1A), var(--secondary, #C9A227));
-  box-shadow: 0 2px 12px rgba(107, 15, 26, 0.3);
+  background: linear-gradient(135deg, var(--primary, #800020), var(--secondary, #D4AF37));
+  box-shadow: 0 2px 12px rgba(128, 0, 32, 0.3);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
               box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
               filter 0.3s;
@@ -174,7 +174,7 @@
 
 .navbar__donate-btn:hover {
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 6px 24px rgba(107, 15, 26, 0.45);
+  box-shadow: 0 6px 24px rgba(128, 0, 32, 0.45);
   filter: brightness(1.08);
 }
 
@@ -187,9 +187,9 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  background: rgba(107, 15, 26, 0.15);
-  border: 1px solid rgba(201, 162, 39, 0.25);
-  color: var(--text-primary, #1A1A1A);
+  background: rgba(128, 0, 32, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: var(--text-primary, #FFF5E6);
   font-family: var(--font-primary, 'Poppins', sans-serif);
   font-size: 0.82rem;
   font-weight: 500;
@@ -201,9 +201,9 @@
 }
 
 .navbar__lang-btn:hover {
-  background: rgba(107, 15, 26, 0.3);
-  border-color: rgba(201, 162, 39, 0.5);
-  box-shadow: 0 0 12px rgba(201, 162, 39, 0.15);
+  background: rgba(128, 0, 32, 0.3);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.15);
 }
 
 .navbar__lang-btn--mobile {
@@ -235,7 +235,7 @@
   width: 26px;
   height: 2.5px;
   border-radius: 4px;
-  background: var(--primary, #6B0F1A);
+  background: var(--primary, #800020);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
               opacity 0.25s,
               width 0.3s;
@@ -263,10 +263,10 @@
   width: 100%;
   max-height: 0;
   overflow: hidden;
-  background: rgba(253, 246, 227, 0.98);
+  background: rgba(13, 2, 8, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(107, 15, 26, 0.15);
+  border-bottom: 1px solid rgba(128, 0, 32, 0.15);
   transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
               opacity 0.35s;
   opacity: 0;
@@ -290,7 +290,7 @@
 .navbar__mobile-link {
   display: block;
   text-decoration: none;
-  color: var(--text-primary, #1A1A1A);
+  color: var(--text-primary, #FFF5E6);
   font-family: var(--font-primary, 'Poppins', sans-serif);
   font-size: 1.05rem;
   font-weight: 500;
@@ -300,15 +300,15 @@
 }
 
 .navbar__mobile-link:hover {
-  background: rgba(107, 15, 26, 0.1);
-  color: var(--primary-light, #A0334D);
+  background: rgba(128, 0, 32, 0.1);
+  color: var(--secondary, #D4AF37);
   padding-left: 1.4rem;
 }
 
 .navbar__mobile-link--active {
-  color: var(--primary, #6B0F1A);
-  background: rgba(107, 15, 26, 0.08);
-  border-left: 3px solid var(--primary, #6B0F1A);
+  color: var(--secondary, #D4AF37);
+  background: rgba(128, 0, 32, 0.08);
+  border-left: 3px solid var(--primary, #800020);
 }
 
 .navbar__donate-btn--mobile {

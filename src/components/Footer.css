@@ -3,8 +3,8 @@
    ═══════════════════════════════════════════════════ */
 
 .footer {
-  background: var(--bg-medium, #FDF6E3);
-  color: var(--text-primary, #1A1A1A);
+  background: var(--bg-medium, #0D0208);
+  color: var(--text-primary, #FFF5E6);
   font-family: var(--font-primary, 'Poppins', sans-serif);
   position: relative;
 }
@@ -20,9 +20,9 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    var(--primary, #6B0F1A) 25%,
-    var(--secondary, #C9A227) 50%,
-    var(--primary, #6B0F1A) 75%,
+    var(--primary, #800020) 25%,
+    var(--secondary, #D4AF37) 50%,
+    var(--primary, #800020) 75%,
     transparent 100%
   );
 }
@@ -54,14 +54,14 @@
   font-weight: 700;
   line-height: 1.5;
   margin: 0 0 0.75rem;
-  background: linear-gradient(135deg, var(--primary, #6B0F1A), var(--secondary, #C9A227));
+  background: linear-gradient(135deg, var(--primary, #800020), var(--secondary, #D4AF37));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .footer__location {
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
   font-size: 0.9rem;
   margin: 0 0 0.9rem;
   line-height: 1.6;
@@ -69,7 +69,7 @@
 
 .footer__tagline {
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
-  color: var(--text-accent, #C9A227);
+  color: var(--text-accent, #D4AF37);
   font-size: 1rem;
   font-style: italic;
   margin: 0;
@@ -82,7 +82,7 @@
   font-size: 1rem;
   font-weight: 600;
   margin: 0 0 1.1rem;
-  color: var(--text-primary, #1A1A1A);
+  color: var(--text-primary, #FFF5E6);
   position: relative;
   padding-bottom: 0.6rem;
 }
@@ -95,7 +95,7 @@
   width: 36px;
   height: 2px;
   border-radius: 2px;
-  background: linear-gradient(90deg, var(--primary, #6B0F1A), var(--secondary, #C9A227));
+  background: linear-gradient(90deg, var(--primary, #800020), var(--secondary, #D4AF37));
 }
 
 .footer__link-list {
@@ -109,7 +109,7 @@
 
 .footer__link {
   text-decoration: none;
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
   font-size: 0.92rem;
   transition: color 0.3s, padding-left 0.3s;
   display: inline-block;
@@ -118,14 +118,14 @@
 .footer__link::before {
   content: '›';
   margin-right: 0.45rem;
-  color: var(--primary, #6B0F1A);
+  color: var(--primary, #800020);
   opacity: 0;
   transition: opacity 0.25s, margin-right 0.25s;
   font-weight: 700;
 }
 
 .footer__link:hover {
-  color: var(--primary, #6B0F1A);
+  color: var(--primary, #800020);
   padding-left: 4px;
 }
 
@@ -149,7 +149,7 @@
   align-items: flex-start;
   gap: 0.6rem;
   font-size: 0.92rem;
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
   line-height: 1.6;
 }
 
@@ -161,17 +161,17 @@
 
 .footer__contact-link {
   text-decoration: none;
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
   transition: color 0.3s;
   word-break: break-all;
 }
 
 .footer__contact-link:hover {
-  color: var(--primary, #6B0F1A);
+  color: var(--primary, #800020);
 }
 
 .footer__address {
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
 }
 
 /* ── Divider ── */
@@ -182,9 +182,9 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    var(--primary, #6B0F1A) 30%,
-    var(--secondary, #C9A227) 50%,
-    var(--primary, #6B0F1A) 70%,
+    var(--primary, #800020) 30%,
+    var(--secondary, #D4AF37) 50%,
+    var(--primary, #800020) 70%,
     transparent 100%
   );
   opacity: 0.35;
@@ -206,7 +206,7 @@
 .footer__copyright {
   margin: 0;
   font-size: 0.82rem;
-  color: var(--text-secondary, #404040);
+  color: var(--text-secondary, #CCAD8F);
   opacity: 0.75;
 }
 
@@ -214,7 +214,7 @@
   margin: 0;
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
   font-size: 0.88rem;
-  color: var(--text-accent, #C9A227);
+  color: var(--text-accent, #D4AF37);
   opacity: 0.85;
 }
 
