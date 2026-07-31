@@ -27,15 +27,14 @@
   position: relative;
   width: 100%;
   max-width: 580px;
-  background: linear-gradient(145deg, rgba(107, 15, 26, 0.15) 0%, rgba(255, 255, 255, 0.8) 100%);
-  border: 1px solid rgba(201, 162, 39, 0.25);
+  background: #FFFFFF;
+  border: 2px solid var(--secondary, #C9A227);
   border-radius: 24px;
   padding: 2.5rem 2rem 2rem;
   text-align: center;
   box-shadow:
-    0 0 60px rgba(107, 15, 26, 0.25),
-    0 0 120px rgba(201, 162, 39, 0.08),
-    inset 0 1px 0 rgba(201, 162, 39, 0.15);
+    0 20px 60px rgba(107, 15, 26, 0.15),
+    0 0 120px rgba(201, 162, 39, 0.15);
   animation: langCardIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -136,11 +135,12 @@
   justify-content: center;
   padding: 2rem 1rem 1.75rem;
   border-radius: 16px;
-  border: 1px solid rgba(201, 162, 39, 0.25);
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 246, 227, 0.95) 100%);
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, var(--accent, #E85D04) 0%, #CC5204 100%);
   cursor: pointer;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
+  box-shadow: 0 8px 24px rgba(232, 93, 4, 0.25);
 }
 
 .lang-card::before {
@@ -154,11 +154,11 @@
 }
 
 .lang-card:hover {
-  border-color: rgba(201, 162, 39, 0.5);
-  transform: translateY(-4px);
+  border-color: var(--secondary, #C9A227);
+  transform: translateY(-6px);
   box-shadow:
-    0 12px 40px rgba(107, 15, 26, 0.3),
-    0 0 30px rgba(201, 162, 39, 0.12);
+    0 15px 35px rgba(232, 93, 4, 0.4),
+    0 0 30px rgba(201, 162, 39, 0.4);
 }
 
 .lang-card:hover::before {
@@ -183,19 +183,19 @@
 
 /* Language flag/icon */
 .lang-card__icon {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 0.75rem;
   display: block;
   line-height: 1;
-  opacity: 0.9;
-  color: var(--primary, #6B0F1A);
+  opacity: 1;
+  color: #FFF5E6;
 }
 
 /* Primary label (large) */
 .lang-card__primary {
   font-size: 1.65rem;
   font-weight: 700;
-  color: var(--primary, #6B0F1A);
+  color: #FFF5E6;
   line-height: 1.2;
   margin-bottom: 0.3rem;
   position: relative;
@@ -204,9 +204,9 @@
 
 /* Secondary label (small, alternate script) */
 .lang-card__secondary {
-  font-size: 0.85rem;
-  color: rgba(201, 162, 39, 0.7);
-  font-weight: 400;
+  font-size: 0.9rem;
+  color: rgba(255, 245, 230, 0.9);
+  font-weight: 500;
   letter-spacing: 0.05em;
   position: relative;
   z-index: 1;
@@ -220,10 +220,12 @@
 }
 
 .lang-modal-mantra {
-  font-size: 0.8rem;
-  color: rgba(201, 162, 39, 0.5);
+  font-size: 0.85rem;
+  color: var(--primary, #6B0F1A);
+  font-weight: 500;
   letter-spacing: 0.1em;
   margin: 0;
+  opacity: 0.8;
 }
 
 /* ═══ Responsive ═══ */
