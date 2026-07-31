@@ -224,7 +224,7 @@
 @media (max-width: 900px) {
   .footer__top .footer__container {
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    gap: 1.5rem;
   }
 
   .footer__col--info {
@@ -234,17 +234,17 @@
 
 @media (max-width: 600px) {
   .footer__top {
-    padding: 2rem 0 1.5rem;
+    padding: 1.5rem 0 1rem;
   }
 
   .footer__top .footer__container {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
 
   .footer__heading {
-    margin-bottom: 1rem;
-    padding-bottom: 0.4rem;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.3rem;
   }
 
   .footer__col--info {
@@ -263,7 +263,7 @@
   }
 
   .footer__contact-list {
-    gap: 0.5rem;
+    gap: 0.35rem;
   }
 
   .footer__contact-list li {
@@ -272,7 +272,7 @@
 
   .footer__link-list {
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.25rem;
   }
 
   .footer__bottom-inner {
@@ -281,6 +281,16 @@
   }
 
   .footer__temple-name {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .footer__location {
+    font-size: 0.82rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .footer__tagline {
+    font-size: 0.85rem;
   }
 }
