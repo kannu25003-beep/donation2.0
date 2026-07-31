@@ -280,23 +280,7 @@ ol {
   animation: float 3s ease-in-out infinite;
 }
 
-/* ------------------------------------------
-   Scrollbar Styling
-   ------------------------------------------ */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-dark);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--gradient-saffron);
-  border-radius: 4px;
-}
-
-/* ------------------------------------------
+/* Removed custom scrollbar as requested */
    Selection Styling
    ------------------------------------------ */
 ::selection {
