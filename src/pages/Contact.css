@@ -224,7 +224,7 @@ a.contact-details-value:hover {
    3. CONTACT FORM + MAP
    ═══════════════════════════════════════════════════ */
 .contact-main {
-  padding: 0 0 72px;
+  padding: 60px 0 72px;
   background: var(--bg-dark, #FDF6E3);
 }
 
