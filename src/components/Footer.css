@@ -238,8 +238,8 @@
   }
 
   .footer__top .footer__container {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem 1rem;
   }
 
   .footer__heading {
@@ -248,7 +248,12 @@
   }
 
   .footer__col--info {
+    grid-column: 1 / -1;
     text-align: center;
+  }
+
+  .footer__col--social {
+    grid-column: 1 / -1;
   }
 
   .footer__heading::after {
