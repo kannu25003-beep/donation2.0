@@ -29,13 +29,13 @@
   0%,
   100% {
     box-shadow:
-      0 0 20px rgba(128, 0, 32, 0.4),
-      0 0 60px rgba(128, 0, 32, 0.15);
+      0 0 20px rgba(107, 15, 26, 0.4),
+      0 0 60px rgba(107, 15, 26, 0.15);
   }
   50% {
     box-shadow:
-      0 0 30px rgba(128, 0, 32, 0.6),
-      0 0 90px rgba(128, 0, 32, 0.25);
+      0 0 30px rgba(107, 15, 26, 0.6),
+      0 0 90px rgba(107, 15, 26, 0.25);
   }
 }
 
@@ -69,7 +69,7 @@
   font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--text-primary, #FFF5E6);
+  color: var(--text-primary, #1A1A1A);
   margin: 0 0 0.25rem;
   letter-spacing: 0;
 }
@@ -77,7 +77,7 @@
 .section-subtitle {
   font-family: var(--font-primary, "Poppins", sans-serif);
   font-size: 1rem;
-  color: var(--text-secondary, #CCAD8F);
+  color: var(--text-secondary, #404040);
   text-transform: uppercase;
   letter-spacing: 3px;
   margin: 0;
@@ -123,9 +123,9 @@
   height: 100%;
   background: linear-gradient(
     175deg,
-    rgba(13, 2, 8, 0.85) 0%,
-    rgba(26, 8, 16, 0.8) 40%,
-    rgba(42, 16, 24, 0.75) 70%
+    rgba(240, 229, 204, 0.85) 0%,
+    rgba(253, 246, 227, 0.8) 40%,
+    rgba(255, 255, 255, 0.75) 70%
   );
   z-index: 1;
 }
@@ -139,7 +139,7 @@
   font-size: 22rem;
   line-height: 1;
   opacity: 0.03;
-  color: var(--secondary, #D4AF37);
+  color: var(--secondary, #C9A227);
   pointer-events: none;
   user-select: none;
   z-index: 2;
@@ -175,13 +175,13 @@
 .hero__tagline {
   font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
   font-size: 0.95rem;
-  color: var(--text-accent, #D4AF37);
+  color: var(--text-accent, #C9A227);
   letter-spacing: 2px;
   text-transform: none;
 }
 
 .hero__tagline-divider {
-  color: var(--primary, #800020);
+  color: var(--primary, #6B0F1A);
   font-size: 0.7rem;
 }
 
@@ -191,9 +191,9 @@
   font-size: 3.8rem;
   font-weight: 800;
   line-height: 1.2;
-  color: var(--text-primary, #FFF5E6);
+  color: var(--text-primary, #1A1A1A);
   margin: 0.5rem 0 0;
-  background: linear-gradient(135deg, #FFF5E6 0%, #D4AF37 50%, #800020 100%);
+  background: linear-gradient(135deg, #1A1A1A 0%, #C9A227 50%, #6B0F1A 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -210,7 +210,7 @@
   font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
   font-size: 1.6rem;
   font-weight: 600;
-  color: var(--text-accent, #D4AF37);
+  color: var(--text-accent, #C9A227);
   margin: 0;
   letter-spacing: 0.5px;
 }
@@ -222,9 +222,9 @@
   gap: 0.4rem;
   font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
   font-size: 1rem;
-  color: var(--text-secondary, #CCAD8F);
-  background: rgba(128, 0, 32, 0.08);
-  border: 1px solid rgba(128, 0, 32, 0.15);
+  color: var(--text-secondary, #404040);
+  background: rgba(107, 15, 26, 0.08);
+  border: 1px solid rgba(107, 15, 26, 0.15);
   border-radius: var(--radius-lg, 16px);
   padding: 0.6rem 1.4rem;
   backdrop-filter: blur(6px);
@@ -239,7 +239,7 @@
   font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
   font-size: 1.1rem;
   line-height: 1.9;
-  color: var(--text-secondary, #CCAD8F);
+  color: var(--text-secondary, #404040);
   max-width: 680px;
   margin-top: 0.5rem;
 }
@@ -256,8 +256,8 @@
   text-decoration: none;
   background: linear-gradient(
     135deg,
-    var(--primary, #800020),
-    var(--accent, #C75B39)
+    var(--primary, #6B0F1A),
+    var(--accent, #E85D04)
   );
   border: none;
   border-radius: var(--radius-lg, 16px);
@@ -275,8 +275,8 @@
 .hero__cta:hover {
   transform: translateY(-3px) scale(1.04);
   box-shadow:
-    0 0 35px rgba(128, 0, 32, 0.6),
-    0 0 80px rgba(128, 0, 32, 0.2);
+    0 0 35px rgba(107, 15, 26, 0.6),
+    0 0 80px rgba(107, 15, 26, 0.2);
 }
 
 /* ================================================================
@@ -284,7 +284,7 @@
    ================================================================ */
 .tiers {
   padding: 5rem 1.5rem;
-  background: var(--bg-dark, #0D0208);
+  background: var(--bg-dark, #FDF6E3);
 }
 
 .tiers__grid {
@@ -307,7 +307,7 @@
   padding: 2rem 1rem;
   text-decoration: none;
   background: var(--glass, rgba(255, 255, 255, 0.5));
-  border: 1px solid var(--glass-border, rgba(128, 0, 32, 0.12));
+  border: 1px solid var(--glass-border, rgba(107, 15, 26, 0.12));
   border-radius: var(--radius-xl, 24px);
   backdrop-filter: blur(12px);
   transition:
@@ -325,7 +325,7 @@
   border-radius: inherit;
   background: radial-gradient(
     circle at 50% 0%,
-    rgba(212, 175, 55, 0.08) 0%,
+    rgba(201, 162, 39, 0.08) 0%,
     transparent 70%
   );
   opacity: 0;
@@ -335,9 +335,9 @@
 .tier-card:hover {
   transform: translateY(-6px) scale(1.05);
   box-shadow:
-    0 8px 40px rgba(128, 0, 32, 0.25),
-    0 0 60px rgba(212, 175, 55, 0.08);
-  border-color: rgba(212, 175, 55, 0.3);
+    0 8px 40px rgba(107, 15, 26, 0.25),
+    0 0 60px rgba(201, 162, 39, 0.08);
+  border-color: rgba(201, 162, 39, 0.3);
 }
 
 .tier-card:hover::before {
@@ -348,7 +348,7 @@
   font-family: var(--font-primary, "Poppins", sans-serif);
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #D4AF37, #800020);
+  background: linear-gradient(135deg, #C9A227, #6B0F1A);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -359,13 +359,13 @@
   font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--text-primary, #FFF5E6);
+  color: var(--text-primary, #1A1A1A);
 }
 
 .tier-card__english {
   font-family: var(--font-primary, "Poppins", sans-serif);
   font-size: 0.78rem;
-  color: var(--text-secondary, #CCAD8F);
+  color: var(--text-secondary, #404040);
   letter-spacing: 0.5px;
 }
 
@@ -374,7 +374,7 @@
   text-align: center;
   font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
   font-size: 1.05rem;
-  color: var(--text-secondary, #CCAD8F);
+  color: var(--text-secondary, #404040);
   margin-top: 2.5rem;
 }
 
@@ -383,7 +383,7 @@
   font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--text-accent, #D4AF37);
+  color: var(--text-accent, #C9A227);
   margin-top: 1rem;
 }
 
@@ -392,7 +392,7 @@
    ================================================================ */
 .commitments {
   padding: 5rem 1.5rem;
-  background: var(--bg-medium, #0D0208);
+  background: var(--bg-medium, #FDF6E3);
 }
 
 .commitments__grid {
@@ -412,7 +412,7 @@
   gap: 0.8rem;
   padding: 2.5rem 2rem;
   background: var(--glass, rgba(255, 255, 255, 0.5));
-  border: 1px solid var(--glass-border, rgba(128, 0, 32, 0.12));
+  border: 1px solid var(--glass-border, rgba(107, 15, 26, 0.12));
   border-radius: var(--radius-xl, 24px);
   backdrop-filter: blur(10px);
   transition:
@@ -422,7 +422,7 @@
 
 .commitment-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 30px rgba(128, 0, 32, 0.15);
+  box-shadow: 0 6px 30px rgba(107, 15, 26, 0.15);
 }
 
 .commitment-card__icon {
@@ -434,14 +434,14 @@
   font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
   font-size: 1.05rem;
   line-height: 1.7;
-  color: var(--text-primary, #FFF5E6);
+  color: var(--text-primary, #1A1A1A);
   margin: 0;
 }
 
 .commitment-card__english {
   font-family: var(--font-primary, "Poppins", sans-serif);
   font-size: 0.82rem;
-  color: var(--text-secondary, #CCAD8F);
+  color: var(--text-secondary, #404040);
   margin: 0;
   letter-spacing: 0.3px;
 }
@@ -451,7 +451,7 @@
    ================================================================ */
 .gallery-section {
   padding: 5rem 1.5rem;
-  background: var(--bg-dark, #0D0208);
+  background: var(--bg-dark, #FDF6E3);
 }
 
 .gallery-grid {
@@ -509,14 +509,14 @@
   font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
   font-size: 1.35rem;
   line-height: 1.8;
-  color: var(--text-primary, #FFF5E6);
+  color: var(--text-primary, #1A1A1A);
   margin: 0;
 }
 
 .cta-banner__english {
   font-family: var(--font-primary, "Poppins", sans-serif);
   font-size: 1.05rem;
-  color: var(--text-secondary, #CCAD8F);
+  color: var(--text-secondary, #404040);
   margin: 0;
 }
 
@@ -531,8 +531,8 @@
   text-decoration: none;
   background: linear-gradient(
     135deg,
-    var(--primary, #800020),
-    var(--accent, #C75B39)
+    var(--primary, #6B0F1A),
+    var(--accent, #E85D04)
   );
   border: none;
   border-radius: var(--radius-lg, 16px);
@@ -546,8 +546,8 @@
 .cta-banner__btn:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow:
-    0 0 40px rgba(128, 0, 32, 0.55),
-    0 0 80px rgba(128, 0, 32, 0.2);
+    0 0 40px rgba(107, 15, 26, 0.55),
+    0 0 80px rgba(107, 15, 26, 0.2);
 }
 
 /* ================================================================
@@ -703,7 +703,7 @@
   position: fixed;
   inset: 0;
   z-index: 2000;
-  background: rgba(13, 2, 8, 0.95);
+  background: rgba(253, 246, 227, 0.95);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -734,7 +734,7 @@
   top: -2rem;
   right: -2rem;
   background: transparent;
-  color: var(--secondary, #D4AF37);
+  color: var(--secondary, #C9A227);
   border: none;
   font-size: 2rem;
   cursor: pointer;

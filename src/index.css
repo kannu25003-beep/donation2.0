@@ -8,40 +8,40 @@
    ------------------------------------------ */
 :root {
   /* Primary — Warm Terracotta */
-  --primary: #800020;
+  --primary: #6B0F1A;
   --primary-light: #8A1926;
   --primary-dark: #470810;
 
   /* Secondary — Soft Gold */
-  --secondary: #D4AF37;
+  --secondary: #C9A227;
   --secondary-light: #DDBD4A;
 
   /* Accent — Accent Red */
-  --accent: #C75B39;
+  --accent: #E85D04;
   --accent-light: #F77D2C;
 
   /* Backgrounds */
-  --bg-dark: #0D0208;
-  --bg-medium: #1A0810;
-  --bg-light: #2A1018;
-  --bg-card: rgba(42, 16, 24, 0.75);
+  --bg-dark: #FDF6E3;
+  --bg-medium: #FAF3E0;
+  --bg-light: #FFFFFF;
+  --bg-card: rgba(255, 255, 255, 0.75);
 
   /* Typography Colors */
-  --text-primary: #FFF5E6;
-  --text-secondary: #CCAD8F;
-  --text-accent: #800020;
+  --text-primary: #1A1A1A;
+  --text-secondary: #404040;
+  --text-accent: #6B0F1A;
 
   /* Gradients */
-  --gradient-hero: linear-gradient(135deg, #0D0208 0%, #2A1018 50%, #0D0208 100%);
-  --gradient-saffron: linear-gradient(135deg, #800020, #D4AF37);
-  --gradient-card: linear-gradient(145deg, rgba(26, 8, 16, 0.8), rgba(212, 175, 55, 0.15));
+  --gradient-hero: linear-gradient(135deg, #FDF6E3 0%, #FFFFFF 50%, #FDF6E3 100%);
+  --gradient-saffron: linear-gradient(135deg, #6B0F1A, #C9A227);
+  --gradient-card: linear-gradient(145deg, rgba(253, 246, 227, 0.8), rgba(201, 162, 39, 0.15));
 
   /* Glass Morphism */
-  --glass: rgba(13, 2, 8, 0.85);
-  --glass-border: rgba(128, 0, 32, 0.15);
+  --glass: rgba(240, 229, 204, 0.85);
+  --glass-border: rgba(107, 15, 26, 0.15);
 
   /* Shadows */
-  --shadow-glow: 0 0 20px rgba(128, 0, 32, 0.15);
+  --shadow-glow: 0 0 20px rgba(107, 15, 26, 0.15);
   --shadow-card: 0 8px 32px rgba(26, 26, 26, 0.08);
 
   /* Border Radii */
@@ -155,13 +155,13 @@ ol {
 }
 
 .glass-card:hover {
-  border-color: rgba(212, 175, 55, 0.3);
+  border-color: rgba(201, 162, 39, 0.3);
   box-shadow: var(--shadow-glow);
 }
 
 .btn-primary {
   background: var(--gradient-saffron);
-  color: #0D0208;
+  color: #FDF6E3;
   font-weight: 600;
   padding: 0.875rem 2rem;
   border-radius: var(--radius-md);
@@ -173,7 +173,7 @@ ol {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(128, 0, 32, 0.4);
+  box-shadow: 0 8px 25px rgba(107, 15, 26, 0.4);
 }
 
 .btn-outline {
@@ -188,7 +188,7 @@ ol {
 
 .btn-outline:hover {
   background: var(--secondary);
-  color: #0D0208;
+  color: #FDF6E3;
 }
 
 /* ------------------------------------------
@@ -236,10 +236,10 @@ ol {
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 5px rgba(128, 0, 32, 0.3);
+    box-shadow: 0 0 5px rgba(107, 15, 26, 0.3);
   }
   50% {
-    box-shadow: 0 0 20px rgba(128, 0, 32, 0.6);
+    box-shadow: 0 0 20px rgba(107, 15, 26, 0.6);
   }
 }
 
@@ -300,8 +300,8 @@ ol {
    Selection Styling
    ------------------------------------------ */
 ::selection {
-  background: rgba(128, 0, 32, 0.3);
-  color: #D4AF37;
+  background: rgba(107, 15, 26, 0.3);
+  color: #C9A227;
 }
 
 /* ------------------------------------------
