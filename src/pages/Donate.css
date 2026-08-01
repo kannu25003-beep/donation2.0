@@ -5,7 +5,7 @@
 /* ---------- Page Hero / Banner ---------- */
 .donate-hero {
   position: relative;
-  padding: 5rem 2rem 3.5rem;
+  padding: 8rem 2rem 4rem;
   text-align: center;
   overflow: hidden;
   background: var(--gradient-hero, linear-gradient(135deg, #FDF6E3 0%, #FDF6E3 50%, #FFFFFF 100%));

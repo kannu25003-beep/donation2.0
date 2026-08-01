@@ -21,7 +21,7 @@
    ═══════════════════════════════════════════════════ */
 .contact-hero {
   position: relative;
-  padding: 100px 24px 72px;
+  padding: 130px 24px 60px;
   text-align: center;
   overflow: hidden;
   background: var(--gradient-hero, linear-gradient(135deg, #FDF6E3 0%, #FFFFFF 50%, #FDF6E3 100%));
@@ -606,14 +606,14 @@ a.contact-details-value:hover {
   }
 
   .contact-hero {
-    padding: 80px 20px 56px;
+    padding: 110px 20px 50px;
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
   .contact-hero {
-    padding: 64px 16px 44px;
+    padding: 90px 16px 40px;
   }
 
   .contact-container {
