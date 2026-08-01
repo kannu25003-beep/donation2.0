@@ -281,6 +281,8 @@ ol {
 }
 
 /* Removed custom scrollbar as requested */
+
+/* ------------------------------------------
    Selection Styling
    ------------------------------------------ */
 ::selection {
