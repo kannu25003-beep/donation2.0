@@ -8,7 +8,7 @@
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
   color: var(--secondary, #C9A227);
   font-size: 0.95rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
   margin-bottom: 0.5rem;
 }
 
