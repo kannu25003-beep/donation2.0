@@ -229,28 +229,32 @@ function About() {
               <div className="committee-card__img-wrapper">
                 <img src="/images/President-Chairman.jpg" alt="President / Chairman" className="committee-card__img" />
               </div>
-              <h3 className="committee-card__role">{t('अध्यक्ष', 'President / Chairman')}</h3>
+              <h3 className="committee-card__name">Kiran Tiwari</h3>
+              <p className="committee-card__role">{t('अध्यक्ष', 'President / Chairman')}</p>
             </div>
             {/* Vice President */}
             <div className="committee-card fade-up delay-1">
               <div className="committee-card__img-wrapper">
                 <img src="/images/Vice President.jpg" alt="Vice President" className="committee-card__img" />
               </div>
-              <h3 className="committee-card__role">{t('उपाध्यक्ष', 'Vice President')}</h3>
+              <h3 className="committee-card__name">Vinu Tiwari</h3>
+              <p className="committee-card__role">{t('उपाध्यक्ष', 'Vice President')}</p>
             </div>
             {/* Secretary */}
             <div className="committee-card fade-up delay-2">
               <div className="committee-card__img-wrapper">
                 <img src="/images/Secretary.jpg" alt="Secretary" className="committee-card__img" />
               </div>
-              <h3 className="committee-card__role">{t('सचिव', 'Secretary')}</h3>
+              <h3 className="committee-card__name">Minu Tiwari</h3>
+              <p className="committee-card__role">{t('सचिव', 'Secretary')}</p>
             </div>
             {/* Trustee & Treasurer */}
             <div className="committee-card fade-up delay-3">
               <div className="committee-card__img-wrapper">
                 <img src="/images/Trustee_and_Treasurer.jpg" alt="Trustee & Treasurer" className="committee-card__img" />
               </div>
-              <h3 className="committee-card__role">{t('ट्रस्टी एवं कोषाध्यक्ष', 'Trustee & Treasurer')}</h3>
+              <h3 className="committee-card__name">Vinita</h3>
+              <p className="committee-card__role">{t('ट्रस्टी एवं कोषाध्यक्ष', 'Trustee & Treasurer')}</p>
             </div>
           </div>
         </div>
