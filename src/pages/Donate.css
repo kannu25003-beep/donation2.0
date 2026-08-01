@@ -804,6 +804,19 @@
   vertical-align: middle;
 }
 
+/* ---------- Mobile Deep Link Button ---------- */
+.donate-upi-card__mobile-action {
+  display: none;
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+}
+
+.donate-upi-btn--mobile {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
 /* ---------- Bank Details ---------- */
 .donate-bank-rows {
   display: flex;
@@ -921,6 +934,10 @@
   .donate-info-col {
     position: static;
     order: -1;
+  }
+
+  .donate-upi-card__mobile-action {
+    display: block;
   }
 
   .donate-form-card {

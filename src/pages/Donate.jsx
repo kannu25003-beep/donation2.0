@@ -680,6 +680,17 @@ function Donate() {
                       shivkhatushyamtemple@aubiz
                     </span>
                   </div>
+                  
+                  {/* Deep Link Button for Mobile/Tablet */}
+                  <div className="donate-upi-card__mobile-action">
+                    <a
+                      href={`upi://pay?pa=shivkhatushyamtemple@aubiz&pn=${encodeURIComponent("SHIV KHATUSHYAMJI TEMPLE DEVBHOOMI")}&cu=INR${getDonationAmount() ? `&am=${getDonationAmount()}` : ""}`}
+                      className="donate-btn donate-btn--primary donate-upi-btn--mobile"
+                    >
+                      {t("किसी भी UPI ऐप से भुगतान करें", "Pay via UPI App")}
+                    </a>
+                  </div>
+
                   <button
                     type="button"
                     className="donate-copy-btn"
