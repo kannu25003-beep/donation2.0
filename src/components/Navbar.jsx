@@ -57,7 +57,7 @@ function Navbar() {
           <span className="navbar__om" aria-hidden="true">
             श्री
           </span>
-          <span className="navbar__temple-name">श्री खाटू श्याम मंदिर</span>
+          <span className="navbar__temple-name">खाटू श्याम मंदिर</span>
         </Link>
 
         {/* ── Desktop Nav Links ── */}
