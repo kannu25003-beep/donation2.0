@@ -77,9 +77,9 @@ function Footer() {
                 <span className="footer__icon" aria-hidden="true">
                   <FaEnvelope />
                 </span>
-                {/* <a href="mailto:shivkhatushyamtemple@aubiz" className="footer__contact-link">
-                  shivkhatushyamtemple@aubiz
-                </a> */}
+                <a href="mailto:Shivkhatushyamjitemple15@gmail.com" className="footer__contact-link">
+                  Shivkhatushyamjitemple15@gmail.com
+                </a>
               </li>
               <li>
                 <span className="footer__icon" aria-hidden="true">

@@ -99,18 +99,17 @@ const Contact = () => {
                   </div>
                 </li>
 
-                {/* Email
+                {/* Email */}
                 <li className="contact-details-item">
                   <div className="contact-details-text">
                     <h3 className="contact-details-label">
                       <FaEnvelope className="contact-details-icon" /> {t('ईमेल', 'Email')}
                     </h3>
-                    <a href="mailto:shivkhatushyamtemple@aubiz" className="contact-details-value">
-                      shivkhatushyamtemple@aubiz
+                    <a href="mailto:Shivkhatushyamjitemple15@gmail.com" className="contact-details-value">
+                      Shivkhatushyamjitemple15@gmail.com
                     </a>
                   </div>
                 </li>
-                */}
 
                 {/* Location */}
                 <li className="contact-details-item">
