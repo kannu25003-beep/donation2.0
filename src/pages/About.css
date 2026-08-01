@@ -66,15 +66,15 @@
   padding: 8rem 2rem 4rem;
   text-align: center;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--primary, #6B0F1A) 0%, #4A0A12 100%);
+  background: var(--gradient-hero, linear-gradient(135deg, #FDF6E3 0%, #FFFFFF 50%, #FDF6E3 100%));
 }
 
 .about-hero__overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
-    radial-gradient(circle at 20% 80%, rgba(201, 162, 39, 0.15) 0%, transparent 50%);
+    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(107, 15, 26, 0.12) 0%, transparent 70%),
+    radial-gradient(circle at 20% 80%, rgba(201, 162, 39, 0.08) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -89,10 +89,9 @@
   font-family: var(--font-hindi, 'Noto Sans Devanagari', sans-serif);
   font-size: 3.4rem;
   font-weight: 700;
-  color: #FDF6E3;
+  color: var(--primary, #6B0F1A);
   margin: 0 0 0.25rem;
   line-height: 1.2;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .about-hero__title-en {
@@ -121,15 +120,15 @@
 }
 
 .about-hero__breadcrumb a:hover {
-  color: #FDF6E3;
+  color: var(--primary, #6B0F1A);
 }
 
 .about-hero__breadcrumb-sep {
-  color: rgba(253, 246, 227, 0.5);
+  color: var(--text-secondary, #404040);
 }
 
 .about-hero__breadcrumb-current {
-  color: #FDF6E3;
+  color: var(--text-primary, #1A1A1A);
 }
 
 /* =========================================================
