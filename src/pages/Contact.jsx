@@ -99,7 +99,7 @@ const Contact = () => {
                   </div>
                 </li>
 
-                {/* Email */}
+                {/* Email
                 <li className="contact-details-item">
                   <div className="contact-details-text">
                     <h3 className="contact-details-label">
@@ -110,6 +110,7 @@ const Contact = () => {
                     </a>
                   </div>
                 </li>
+                */}
 
                 {/* Location */}
                 <li className="contact-details-item">
