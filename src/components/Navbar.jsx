@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
-import { TbOm } from "react-icons/tb";
 import { MdLanguage } from "react-icons/md";
 import "./Navbar.css";
 
@@ -56,7 +55,7 @@ function Navbar() {
         {/* ── Brand / Logo ── */}
         <Link to="/" className="navbar__brand" aria-label="Home">
           <span className="navbar__om" aria-hidden="true">
-            <TbOm />
+            श्री
           </span>
           <span className="navbar__temple-name">श्री खाटू श्याम मंदिर</span>
         </Link>
