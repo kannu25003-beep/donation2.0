@@ -190,9 +190,10 @@
   font-family: var(--font-hindi, "Noto Sans Devanagari", sans-serif);
   font-size: 3.8rem;
   font-weight: 800;
-  line-height: 1.2;
   color: var(--text-primary, #1A1A1A);
   margin: 0.5rem 0 0;
+  line-height: 1.4;
+  padding: 0.1em 0;
   background: linear-gradient(135deg, #1A1A1A 0%, #C9A227 50%, #6B0F1A 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
